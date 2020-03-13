@@ -10,7 +10,7 @@
     },
     "keywords": ["electron", "nodejs", "webrtc", "remote"],
     "author": "zengxingqi",
-    "license": "ISC",
+    "license": "GPL3.0",
     "devDependencies": {
         "concurrently": "^5.1.0",
         "electron": "^7.1.10",
