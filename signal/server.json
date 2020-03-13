@@ -1,0 +1,7 @@
+{
+    "apps": [{
+        "name": "signal",
+        "script": "./index.js",
+        "watch": false
+    }]
+}
