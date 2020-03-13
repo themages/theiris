@@ -1,5 +1,5 @@
 {
-    "name": "screen",
+    "name": "theiris",
     "version": "1.0.0",
     "description": "a remote control tool",
     "main": "app/main/index.js",
