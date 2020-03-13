@@ -1,15 +1,15 @@
 {
     "name": "screen",
     "version": "1.0.0",
-    "description": "",
+    "description": "a remote control tool",
     "main": "app/main/index.js",
     "scripts": {
         "start:main": "./node_modules/.bin/electron .",
         "start:render": "cd app/renderer/src/main && npm start",
         "start": "concurrently 'npm run start:render' 'wait-on http://localhost:3000 && npm run start:main'"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": ["electron", "nodejs", "webrtc", "remote"],
+    "author": "zengxingqi",
     "license": "ISC",
     "devDependencies": {
         "concurrently": "^5.1.0",
@@ -18,6 +18,7 @@
         "wait-on": "^4.0.0"
     },
     "dependencies": {
+        "about-window": "^1.13.2",
         "electron-is-dev": "^1.1.0",
         "robotjs": "^0.6.0",
         "vkey": "^1.0.1",
