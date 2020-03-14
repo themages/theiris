@@ -1,9 +1,6 @@
 const { app } = require("electron");
 const handleIPC = require("./ipc.js");
 const { create: createMainWindow, show: showMainWindow, close: closeMainWindow } = require("./windows/main");
-// const { create: createControlWindow } = require("./windows/control");
-
-
 
 const gotTheLock = app.requestSingleInstanceLock();
 if (!gotTheLock) {
@@ -14,7 +11,6 @@ if (!gotTheLock) {
     });
     app.on("ready", () => {
         createMainWindow();
-        // createControlWindow();
         handleIPC();
         require("./trayAndMenu/");
         require("./robot")();
@@ -24,5 +20,5 @@ if (!gotTheLock) {
     });
     app.on("activate", () => {
         showMainWindow();
-    })
+    });
 }
