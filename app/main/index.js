@@ -9,6 +9,9 @@ if (!gotTheLock) {
     app.on("second-instance", (event, commandLine, workingDirectory) => {
         showMainWindow();
     });
+    app.on("will-finish-launching", () => {
+        require("./update");
+    })
     app.on("ready", () => {
         createMainWindow();
         handleIPC();
