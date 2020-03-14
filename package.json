@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "a remote control tool",
     "main": "app/main/index.js",
-    "homepage": "./",
     "scripts": {
         "build": "cd app/renderer/src/main && npm run build",
         "start:main": "./node_modules/.bin/electron .",
