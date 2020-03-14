@@ -95,5 +95,12 @@
         "squirrelWindows": {
             "iconUrl": "https://raw.githubusercontent.com/dengyaolong/geektime-electron/master/img/icon.ico"
         }
+    },
+    "bugs": {
+        "url": "https://github.com/themages/theiris/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/themages/theiris.git"
     }
 }
