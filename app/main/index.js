@@ -2,6 +2,8 @@ const { app } = require("electron");
 const handleIPC = require("./ipc.js");
 const { create: createMainWindow, show: showMainWindow, close: closeMainWindow } = require("./windows/main");
 
+if(require("electron-squirrel-startup")) return app.quit();
+
 const gotTheLock = app.requestSingleInstanceLock();
 if (!gotTheLock) {
     app.quit();
