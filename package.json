@@ -39,7 +39,7 @@
         "ws": "^7.2.3"
     },
     "build": {
-        "appId": "com.tankan.theiris",
+        "appId": "com.themages.theiris",
         "productName": "theiris",
         "files": "app",
         "asar": true,
