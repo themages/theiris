@@ -1,4 +1,5 @@
 const { app } = require("electron");
+const isDev = require("electron-is-dev");
 const handleIPC = require("./ipc.js");
 const { create: createMainWindow, show: showMainWindow, close: closeMainWindow } = require("./windows/main");
 
@@ -12,7 +13,10 @@ if (!gotTheLock) {
         showMainWindow();
     });
     app.on("will-finish-launching", () => {
-        require("./update");
+        if(!isDev) {
+            require("./update");
+        }
+        require("./crash-reporter").init();
     })
     app.on("ready", () => {
         createMainWindow();
