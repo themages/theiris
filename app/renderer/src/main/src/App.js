@@ -34,6 +34,9 @@ function App() {
         e.preventDefault();
         const menu = new Menu();
         menu.append(new MenuItem({label: "复制", role: "copy"}));
+        menu.append(new MenuItem({label: "分享到微信", click: (menuItem, win, keyboardEvent) => {
+            ipcRenderer.send("share-to-wechat", localCode);
+        }}));
         menu.popup();
     };
     return (
