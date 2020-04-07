@@ -5,12 +5,12 @@
     "main": "app/main/index.js",
     "scripts": {
         "build": "cd app/renderer/src/main && npm run build",
-        "start:main": "./node_modules/.bin/electron .",
+        "start:main": "electron .",
         "start:render": "cd app/renderer/src/main && npm start",
         "start": "concurrently 'npm run start:render' 'wait-on http://localhost:3000 && npm run start:main'",
-        "pack:mac": "npm run build && ./node_modules/.bin/electron-builder build --mac",
-        "pack:win": "npm run build && ./node_modules/.bin/electron-builder build --win --ia32",
-        "postinstall": "./node_modules/.bin/electron-builder install-app-deps"
+        "pack:mac": "npm run build && electron-builder build --mac",
+        "pack:win": "npm run build && electron-builder build --win --ia32",
+        "postinstall": "electron-builder install-app-deps"
     },
     "keywords": [
         "electron",
