@@ -1,9 +1,9 @@
 const { autoUpdater, app, dialog } = require("electron");
 
 if(process.platform === "darwin") {
-    autoUpdater.setFeedURL("http://127.0.0.1:9999/darwin?version=" + app.getVersion());
+    autoUpdater.setFeedURL("http://120.24.162.36:9999/darwin?version=" + app.getVersion());
 } else if (process.platform === "win32") {
-    autoUpdater.setFeedURL("http://127.0.0.1:9999/win32?version=" + app.getVersion());
+    autoUpdater.setFeedURL("http://120.24.162.36:9999/win32?version=" + app.getVersion());
 }
 
 autoUpdater.checkForUpdates();
